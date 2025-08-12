@@ -1,0 +1,183 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 18,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "margin-bottom": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpris",
+    "custom/screenshot"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "memory",
+    "backlight",
+    "network",
+    "bluetooth",
+    "custom/notification",
+    "custom/power"
+  ],
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/rofi/applets/bin/powermenu.sh",
+    "tooltip": "Power Menu"
+  },
+  "custom/notification": {
+    "format": "󰂚",
+    "on-click": "swaync-client -t",
+    "on-click-right": "swaync-client -C",
+    "tooltip": "Notifications"
+  },
+  "custom/screenshot": {
+    "format": "󰄀",
+    "on-click": "~/.config/rofi/applets/bin/screenshot.sh",
+    "tooltip": "Screenshot"
+  },
+  "custom/network-applet": {
+    "format": "󰤨",
+    "on-click": "kitty nmtui",
+    "on-click-right": "nm-connection-editor",
+    "tooltip": "Network Manager"
+  },
+  "custom/volume-applet": {
+    "format": "󰕾",
+    "on-click": "~/.config/rofi/applets/bin/volume.sh",
+    "tooltip": "Volume Control"
+  },
+  "mpris": {
+    "format": "{player_icon}",
+    "format-paused": "▶",
+    "max-length": 16,
+    "player-icons": {
+      "default": "⏸",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "▶"
+    }
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "network": {
+    "format-wifi": " 󰤨    {essid}   ",
+    "format-ethernet": "<span color='#048208'> 󰅢   </span>{bandwidthDownBytes} ",
+    "tooltip-format": "<span color='#fff'> 󰅧    </span>{bandwidthUpBytes}  <span color='#fff'> 󰅢    </span>{bandwidthDownBytes}",
+    "format-linked": " 󱘖 {ifname} (No IP) ",
+    "format-disconnected": "    Disconnected ",
+    "format-alt": " 󰤨   {signalStrength}% ",
+    "interval": 1,
+    "on-click-right": "kitty nmtui"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " {icon} {capacity}% ",
+    "format-charging": " 󱐋{capacity}%",
+    "interval": 1,
+    "format-icons": [
+      "󰂎",
+      "󰁼",
+      "󰁿",
+      "󰂁",
+      "󰁹"
+    ],
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%  ",
+    "format-muted": " 󰖁     0% ",
+    "format-icons": {
+      "headphone": " 󰋋 ",
+      "hands-free": " 󰋎 ",
+      "headset": " 󰋎 ",
+      "phone": " 󰏲 ",
+      "portable": " 󰦢 ",
+      "car": " 󰄋 ",
+      "default": [
+        " 󰕿 ",
+        " 󰖀 ",
+        " 󰕾 "
+      ]
+    },
+    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pactl -- set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "{volume}%"
+  },
+  "memory": {
+    "format": " 󰍛    {used:0.1f}G ",
+    "tooltip": true,
+    "tooltip-format": "{used:0.2f}G/{total:0.2f}G"
+  },
+  "clock": {
+    "interval": 1,
+    "timezone": "Asia/Manila",
+    "format": "  {:%a, %b %d  %I:%M %p}  ",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#88c0d0'><b>{}</b></span>",
+        "weekdays": "<span color='#81a1c1'><b>{}</b></span>",
+        "today": "<span color='#bf616a'><b>{}</b></span>"
+      }
+    }
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 4,
+    "show-passive-items": true
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}  {percent}% ",
+    "tooltip": true,
+    "tooltip-format": ": {percent}%",
+    "format-icons": [
+      " 󰃞 ",
+      " 󰃝 ",
+      " 󰃟 ",
+      " 󰃠 "
+    ]
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": " 󰂱   {device_alias} ",
+    "format-connected-battery": " 󰂱   {device_alias}   {device_battery_percentage}% ",
+    "on-click": "kitty -e bluetuith",
+    "on-click-right": "blueman-manager",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  }
+}

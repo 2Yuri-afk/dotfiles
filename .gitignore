@@ -1,0 +1,55 @@
+# Dotfiles .gitignore
+
+# Personal files
+*.log
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Cache and temporary files
+cache/
+tmp/
+.cache/
+
+# Personal data
+credentials.json
+**/credentials/
+**/secrets/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.directory
+.Trash-*
+
+# Fish shell
+fish_variables
+fishd.*
+
+# Specific config exclusions
+config/Code/
+config/Cursor/
+config/BraveSoftware/
+config/obsidian/
+config/spotify/Users/
+config/vesktop/sessionData/
+
+# Screenshots (add your own to assets/)
+screenshots/
+*.png
+*.jpg
+*.jpeg
+
+# Personal scripts
+personal/
+private/
