@@ -8,7 +8,9 @@ choice=$(echo -e "$SCRIPTS" | rofi -dmenu \
     -theme ~/.config/rofi/applets/styles/launcher.rasi \
     -p "Execute" \
     -no-show-icons \
-    -markup-rows)
+    -markup-rows \
+    -i \
+    -matching fuzzy)
 
 case "$choice" in
     "PhoneCam") 

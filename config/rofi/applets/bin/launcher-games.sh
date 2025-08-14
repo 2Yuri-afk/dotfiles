@@ -8,7 +8,9 @@ choice=$(echo -e "$GAMES" | rofi -dmenu \
     -theme ~/.config/rofi/applets/styles/launcher.rasi \
     -p "Play" \
     -no-show-icons \
-    -markup-rows)
+    -markup-rows \
+    -i \
+    -matching fuzzy)
 
 case "$choice" in
     "Brawlhalla") 
