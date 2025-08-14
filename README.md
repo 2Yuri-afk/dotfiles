@@ -1,4 +1,4 @@
-# 🌨️ Dotfiles
+# 🌨️ Yuri's Dotfiles
 
 > *My clean, minimal Arch Linux setup with Hyprland and Nord theme*
 
