@@ -1,6 +1,6 @@
 # 🌨️ Dotfiles
 
-> *A clean, minimal Arch Linux setup with Hyprland and Nord theme*
+> *My clean, minimal Arch Linux setup with Hyprland and Nord theme*
 
 ![Hyprland](https://img.shields.io/badge/WM-Hyprland-blue?style=flat-square&logo=wayland)
 ![Arch](https://img.shields.io/badge/OS-Arch%20Linux-blue?style=flat-square&logo=archlinux)
