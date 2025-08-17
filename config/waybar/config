@@ -7,8 +7,9 @@
   "spacing": 0,
   "margin-bottom": 0,
   "modules-left": [
+    "custom/arch-launcher",
     "hyprland/workspaces",
-    "mpris",
+    "custom/media",
     "custom/screenshot"
   ],
   "modules-center": [
@@ -24,6 +25,13 @@
     "custom/notification",
     "custom/power"
   ],
+  "custom/arch-launcher": {
+    "format": "{}",
+    "exec": "echo '󰣇'",
+    "interval": "once",
+    "on-click": "~/.config/rofi/applets/bin/launcher-apps.sh",
+    "tooltip": "Application Launcher"
+  },
   "custom/power": {
     "format": "⏻",
     "on-click": "~/.config/rofi/applets/bin/powermenu.sh",
@@ -51,17 +59,17 @@
     "on-click": "~/.config/rofi/applets/bin/volume.sh",
     "tooltip": "Volume Control"
   },
-  "mpris": {
-    "format": "{player_icon}",
-    "format-paused": "▶",
-    "max-length": 16,
-    "player-icons": {
-      "default": "⏸",
-      "mpv": "🎵"
-    },
-    "status-icons": {
-      "paused": "▶"
-    }
+  "custom/media": {
+    "format": "{}",
+    "max-length": 40,
+    "interval": 2,
+    "exec": "~/.config/waybar/scripts/media-simple.sh",
+    "exec-if": "playerctl status 2>/dev/null",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "tooltip": true,
+    "tooltip-format": "Left: Play/Pause | Right: Next | Middle: Previous"
   },
   "hyprland/workspaces": {
     "disable-scroll": false,

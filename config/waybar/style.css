@@ -52,7 +52,8 @@
   background-color: #81a1c1;
 }
 
-#mpris,
+#custom-arch-launcher,
+#custom-media,
 #clock,
 #custom-power,
 #custom-screenshot,
@@ -78,10 +79,21 @@
   background-color: #434c5e;
 }
 
-#mpris {
-  font-weight: normal;
+#custom-arch-launcher {
+  font-size: 14px;
+  font-weight: bold;
+  min-width: 25px;
+  color: #81a1c1;
 }
 
+#custom-media {
+  font-weight: normal;
+  min-width: 100px;
+  padding: 2px 8px;
+  margin: 3px 4px;
+}
+
+#custom-arch-launcher:hover,
 #pulseaudio:hover,
 #memory:hover,
 #cpu:hover,
@@ -95,7 +107,7 @@
 #battery:hover,
 #backlight:hover,
 #tray:hover,
-#mpris:hover,
+#custom-media:hover,
 #clock:hover {
   background-color: #4c566a;
   color: #eceff4;
