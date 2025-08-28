@@ -1,0 +1,55 @@
+/* nord colors */
+
+* {
+    /* nord theme colors */
+    background:     #2e3440;
+    background-alt: #3b4252;
+    foreground:     #d8dee9;
+    selected:       #434c5e;
+    active:         #5e81ac;
+    urgent:         #bf616a;
+    
+    /* Standard rofi color mappings */
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @background;
+    
+    active-background:           @active;
+    active-foreground:           @background;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @background;
+    
+    urgent-background:           @urgent;
+    urgent-foreground:           @foreground;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @background;
+    
+    /* Border and separators */
+    border-color:               #3b4252;
+    separatorcolor:             @selected;
+    
+    /* nord palette */
+    nord0:          #2e3440;  /* Polar Night */
+    nord1:          #3b4252;  /* Polar Night */
+    nord2:          #434c5e;  /* Polar Night */
+    nord3:          #4c566a;  /* Polar Night */
+    nord4:          #d8dee9;  /* Snow Storm */
+    nord5:          #e5e9f0;  /* Snow Storm */
+    nord6:          #eceff4;  /* Snow Storm */
+    nord7:          #8fbcbb;  /* Frost */
+    nord8:          #88c0d0;  /* Frost */
+    nord9:          #81a1c1;  /* Frost */
+    nord10:         #5e81ac;  /* Frost */
+    nord11:         #bf616a;  /* Aurora - Red */
+    nord12:         #d08770;  /* Aurora - Orange */
+    nord13:         #ebcb8b;  /* Aurora - Yellow */
+    nord14:         #a3be8c;  /* Aurora - Green */
+    nord15:         #b48ead;  /* Aurora - Purple */
+}

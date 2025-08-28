@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+# Kill any processes using v4l2loopback devices
+for pid in (lsof -t /dev/video*)
+    echo "Killing process $pid using /dev/video*"
+    kill -9 $pid
+end
+
+# Remove v4l2loopback module if loaded
+if lsmod | grep -q v4l2loopback
+    sudo modprobe -r v4l2loopback
+end
+
+# Load v4l2loopback with flipped webcam device
+sudo modprobe v4l2loopback card_label="Flipped Webcam"
+
+# Create flipped version of webcam using ffmpeg
+ffmpeg -f v4l2 -input_format mjpeg -s 1920x1080 -r 30 -i /dev/video0 -vf "hflip,format=yuv420p" -f v4l2 /dev/video2

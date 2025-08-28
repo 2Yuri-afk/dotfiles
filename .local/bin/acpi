@@ -1,0 +1,12 @@
+#!/bin/bash
+# Fallback acpi command for battery info
+case "$1" in
+    -b)
+        # Battery info - simulate a battery
+        echo "Battery 0: Discharging, 75%, 02:30:00 remaining"
+        ;;
+    *)
+        echo "Usage: acpi -b" >&2
+        exit 1
+        ;;
+esac

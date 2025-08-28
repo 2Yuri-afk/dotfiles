@@ -1,0 +1,18 @@
+#!/usr/bin/env fish
+
+# Kill any processes using v4l2loopback devices
+for pid in (lsof -t /dev/video*)
+    echo "Killing process $pid using /dev/video*"
+    kill -9 $pid
+end
+
+# Remove v4l2loopback module if loaded
+if lsmod | grep -q v4l2loopback
+    sudo modprobe -r v4l2loopback
+end
+
+# Load v4l2loopback with two devices
+sudo modprobe v4l2loopback devices=2 video_nr=0,1 card_label="PhoneCam","OBS-Cam" exclusive_caps=1
+
+# Run scrcpy with phone camera to /dev/video0
+scrcpy --video-source=camera --camera-size=1920x1080 --v4l2-sink=/dev/video0 --no-playback --no-window

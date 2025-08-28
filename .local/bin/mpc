@@ -1,0 +1,29 @@
+#!/bin/bash
+# Fallback mpc command for music control
+case "$1" in
+    status)
+        echo "[paused] #1/10   0:00/3:45 (0%)"
+        echo "volume: 75%   repeat: off   random: off"
+        ;;
+    current)
+        echo "No song playing"
+        ;;
+    -f)
+        case "$2" in
+            "%artist%")
+                echo "Unknown Artist"
+                ;;
+            "%title%")
+                echo "No Title"
+                ;;
+        esac
+        ;;
+    -q)
+        # Quiet operations - just return success
+        exit 0
+        ;;
+    *)
+        echo "MPD not available" >&2
+        exit 1
+        ;;
+esac

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1755014912715814-1</unique-id>
+	<command>kitty --working-directory=%f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>edit-delete</icon>
+	<name>Delete as Root</name>
+	<submenu></submenu>
+	<unique-id>1755228523327208-1</unique-id>
+	<command>pkexec thunar %F
+</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>preferences-desktop-wallpaper</icon>
+	<name>Set as wallpaper (Hyprpaper)</name>
+	<submenu></submenu>
+	<unique-id>1755960715978513-1</unique-id>
+	<command>sed -i &quot;s|^preload = .*|preload = $(echo %f)|&quot; ~/.config/hypr/hyprpaper.conf
+sed -i &quot;s|^wallpaper = .*|wallpaper = ,$(echo %f)|&quot; ~/.config/hypr/hyprpaper.conf
+hyprctl hyprpaper preload %f &amp;&amp; hyprctl hyprpaper wallpaper ,%f</command>
+	<description>Set the selected image as wallpaper using hyprpaper.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+</actions>
