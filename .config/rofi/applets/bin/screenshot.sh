@@ -86,7 +86,7 @@ copy_shot () {
 
 # take shots
 shotnow () {
-	cd ${dir} && sleep 0.5 && grim "$file"
+	cd ${dir} && sleep 3 && grim "$file"
 	if command -v wl-copy >/dev/null 2>&1; then
 		wl-copy --type image/png < "$file"
 	fi
