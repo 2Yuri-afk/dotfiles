@@ -10,13 +10,11 @@
 
 </div>
 
----
-
-
-
 <div align="center">
 
 <br>
+<br>
+
 
 **some screenshots:**
 
@@ -27,6 +25,8 @@
 <img src="screenshots/desktop-2.png" width="90%" alt="Desktop Screenshot 2">
 
 <br>
+<br>
+
 
 **quick start:**
 
