@@ -114,13 +114,25 @@
 }
 
 .control-center .notification:hover {
-  background-color: @surface0;
+  /* No background change on hover */
+  background-color: @mantle;
   border-color: @surface1;
+  border-radius: 0 !important;
 }
 
 /* Notification Popup Window */
 .notification-window {
   background-color: transparent;
+  opacity: 1.0 !important;
+}
+
+/* Force all notification states to have no border radius */
+.notification,
+.notification:hover,
+.notification:active,
+.notification-window .notification,
+.notification-window .notification:hover {
+  border-radius: 0 !important;
 }
 
 .notification {
@@ -130,12 +142,16 @@
   margin: 8px;
   padding: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  opacity: 1.0 !important;
   transition: all 200ms ease;
 }
 
 .notification:hover {
-  background-color: @surface1;
-  border-color: @surface2;
+  /* No background change on hover */
+  background-color: @surface0;
+  border-color: @mantle;
+  border-radius: 0 !important;
+  opacity: 1.0 !important;
 }
 
 /* Notification Content */
@@ -169,6 +185,7 @@
 .notification-body {
   background-color: transparent;
   padding: 6px 0;
+  
 }
 
 .notification-body .summary {
@@ -250,13 +267,14 @@
 
 .notification.critical:hover {
   border-color: @aurora1;
-  background-color: @surface1;
+  background-color: @surface0;
+  border-radius: 0 !important;
 }
 
 /* Low Priority Notifications */
 .notification.low {
   border-color: @surface1;
-  opacity: 0.9;
+  opacity: 1.0 !important;
 }
 
 /* Inhibitors Widget */
@@ -299,17 +317,15 @@ scrollbar slider:hover {
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
-    opacity: 0;
   }
   to {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 
 /* Notification Group Styling */
 .notification-group {
-  background-color: @mantle;
+  background-color: transparent;
   border: 1px solid @surface1;
   border-radius: 0;
   margin: 4px 0;
