@@ -35,13 +35,7 @@
       "urgency": "Normal"
     }
   },
-  "notification-visibility": {
-    "example-name": {
-      "state": "muted",
-      "urgency": "Low",
-      "app-name": "Spotify"
-    }
-  },
+  "notification-visibility": {},
   "widgets": ["inhibitors", "title", "dnd", "notifications"],
   "widget-config": {
     "inhibitors": {
@@ -63,7 +57,11 @@
     },
     "mpris": {
       "image-size": 96,
-      "image-radius": 6
+      "image-radius": 0,
+      "blur": false,
+      "button-icon-size": 14,
+      "button-margin": 2,
+      "button-spacing": 2
     }
   }
 }
