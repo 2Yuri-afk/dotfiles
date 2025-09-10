@@ -11,15 +11,15 @@
 }
 
 #waybar {
-  /* background-color: pink; */
-  background-color: transparent;
+  background-color: #2E3440; 
+  /* background-color: transparent; */
 
   /* transition-property: background-color; */
   /* transition-duration: 0.5s; */
 }
 
 #workspaces {
-  background-color: #434c5e;
+  background-color: #343B49;
   border-radius: 0px;
   padding: 1px 4px;
   border: 1px solid #3b4252;

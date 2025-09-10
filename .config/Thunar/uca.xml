@@ -13,19 +13,6 @@
 	<directories/>
 </action>
 <action>
-	<icon>edit-delete</icon>
-	<name>Delete as Root</name>
-	<submenu></submenu>
-	<unique-id>1755228523327208-1</unique-id>
-	<command>pkexec thunar %F
-</command>
-	<description></description>
-	<range>*</range>
-	<patterns>*</patterns>
-	<directories/>
-	<other-files/>
-</action>
-<action>
 	<icon>preferences-desktop-wallpaper</icon>
 	<name>Set as wallpaper (Hyprpaper)</name>
 	<submenu></submenu>
