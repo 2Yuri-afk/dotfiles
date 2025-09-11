@@ -12,3 +12,5 @@ fish_add_path $HOME/.spicetify
 
 # ALIASES
 alias ff "fastfetch"
+
+starship init fish | source

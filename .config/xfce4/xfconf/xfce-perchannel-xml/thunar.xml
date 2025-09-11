@@ -19,7 +19,7 @@
   <property name="last-menubar-visible" type="bool" value="false"/>
   <property name="last-compact-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_25_PERCENT"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,132,123,50,1684,50,50,454,50,50,78,50,971"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,132,123,50,197,50,50,720,50,50,62,50,163"/>
   <property name="default-view" type="string" value="ThunarIconView"/>
   <property name="last-window-width" type="int" value="1136"/>
   <property name="last-window-height" type="int" value="698"/>
